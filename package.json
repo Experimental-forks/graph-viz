@@ -1,0 +1,31 @@
+{
+  "name": "graph-viz",
+  "version": "1.0.0",
+  "description": "graph demo using G6",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --mode development --display-error-details"
+  },
+  "private": true,
+  "dependencies": {
+    "@antv/g6": "^3.2.4"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrybecker4/graph-viz.git"
+  },
+  "keywords": [
+    "graph.visualization",
+    "G6"
+  ],
+  "author": "Barry Becker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barrybecker4/graph-viz/issues"
+  },
+  "homepage": "https://github.com/barrybecker4/graph-viz#readme"
+}
