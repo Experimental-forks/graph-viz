@@ -4,7 +4,8 @@
   "description": "graph demo using G6",
   "scripts": {
     "test": "test",
-    "build": "webpack --mode development --display-error-details"
+    "build": "webpack --mode development",
+    "debug": "webpack --mode development --display-error-details"
   },
   "private": true,
   "dependencies": {
