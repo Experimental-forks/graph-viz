@@ -1,6 +1,6 @@
 export default {
-  "nodes": [
-    {"id": "0", "label": "n0", "class": "c0","x": 1000, "y": -100 },
+  nodes: [
+    {id: "0", label: "n0", class: "c0",x: 1000, y: -100 },
     {"id": "1", "label": "n1", "class": "c0","x": 300, "y": -10 },
     {"id": "2", "label": "n2", "class": "c0","x": 10, "y": 10 },
     {"id": "3", "label": "n3", "class": "c0","x": 320, "y": -100 },
@@ -21,8 +21,8 @@ export default {
     {"id": "18", "label": "n18", "class": "c2","x": 492, "y": 123 },
     {"id": "19", "label": "n19", "class": "c2","x": 123, "y": -241 }
   ],
-  "edges": [
-    {"source": "0", "target": "1", "label": "e0-1", "weight": 1, directed: true },
+  edges: [
+    {source: "0", target: "1", label: "e0-1", weight: 1, directed: true },
     {"source": "0", "target": "2", "label": "e0-2", "weight": 2, directed: false },
     {"source": "0", "target": "3", "label": "e0-3", "weight": 3, directed: true },
     {"source": "0", "target": "4", "label": "e0-4", "weight": 1.4, directed: false },

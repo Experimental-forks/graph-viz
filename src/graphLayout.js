@@ -4,10 +4,13 @@ const CONTAINER = 'mountNode';
 
 export const graphLayout = new G6.Graph({
     container: CONTAINER,
-    width: 900,
-    height: 700,
+    width: 1100,
+    height: 1000,
+    center: [100, 100],
+    //fitView: true,
+    fitViewPadding: [ 10, 20, 20, 10 ],
     defaultNode: {
-        size: 30,
+        size: 10,
         labelCfg: {
           style: {
               fill: '#fff'
@@ -20,8 +23,11 @@ export const graphLayout = new G6.Graph({
         }
     },
     layout: {
-        type: 'force',            // Force layout
-        linkDistance: 150,        // The link distance is 100
+        // Force layout  'force', 'fruchterman', 'circular', 'radial', 'mds', 'dagre', 'concentric', 'mindmap'
+        type: 'concentric',
+        clustering: true,
+        gravity: 1.0,
+        linkDistance: 30,        // The link distance is 100
         preventOverlap: true,     // Prevent nodes from overlapping
     }
 });

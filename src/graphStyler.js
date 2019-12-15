@@ -8,8 +8,9 @@ export default function(data) {
             node.style = {};
         }
         node.style.lineWidth = 1;
-        node.style.stroke = '#666';
-        node.style.fill = 'steelblue';
+        node.style.stroke = '#333';
+        node.style.fill = node.color; //'steelblue';
+        //node.label.color = "black";
         switch (node.class) {
             case 'c0': {
                 node.shape = 'circle';
@@ -32,10 +33,10 @@ export default function(data) {
         if (!edge.style) {
             edge.style = {};
         }
-        edge.shape = 'line'; // or 'cubic' etc
+        edge.shape = 'quadratic'; // or 'cubic' etc
         edge.style.endArrow = edge.directed;
         edge.style.lineWidth = edge.weight;
-        edge.style.opacity = 0.6;
+        edge.style.opacity = edge.directed ? 1.0 : 0.4;
         edge.style.stroke = edge.directed ? 'orange' : 'grey';
     });
 }
