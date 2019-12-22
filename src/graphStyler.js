@@ -9,8 +9,9 @@ export default function(data) {
         }
         node.style.lineWidth = 1;
         node.style.stroke = '#333';
-        node.style.fill = node.color; //'steelblue';
-        //node.label.color = "black";
+        node.style.fill = node.color;
+        node.size = node.size / 2;
+
         switch (node.class) {
             case 'c0': {
                 node.shape = 'circle';
@@ -27,6 +28,7 @@ export default function(data) {
                node.size = [ 35, 20 ];
                break;
             }
+            default: {}
         }
     });
     edges.forEach(edge => {
