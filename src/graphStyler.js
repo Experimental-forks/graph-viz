@@ -10,7 +10,7 @@ export default function(data) {
         node.style.lineWidth = 1;
         node.style.stroke = '#333';
         node.style.fill = node.color;
-        node.size = node.size / 2;
+        //node.size = node.size;
 
         switch (node.class) {
             case 'c0': {
