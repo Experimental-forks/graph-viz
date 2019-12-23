@@ -1,4 +1,6 @@
-export default function(data) {
+import graphScaler from './graphScaler';
+
+export default function(data, graphSize) {
     console.log("processed data = " + data.nodes.length);
 
     if (data.nodes[0].hasOwnProperty('lat')) {
@@ -6,5 +8,6 @@ export default function(data) {
       console.log("new node = " + JSON.stringify(data.nodes[1]));
     }
 
+    graphScaler(data, graphSize);
     return data;
 }

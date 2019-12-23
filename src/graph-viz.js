@@ -1,4 +1,4 @@
-import { autoGraphLayout as graph } from './graphLayout';
+import { fixedLayout as graph } from './graphLayout';
 
 import demoGraph from './data/demoGraph';
 import g90_50 from './data/g90_50';
@@ -10,7 +10,8 @@ import css from './css/graph-viz.css';
 
 
 const main = async () => {
-    const data = graphPreProcessor(g90_50);
+    const data = graphPreProcessor(g90_50, [1000, 800]);
+
     graphStyler(data);
     graph.data(data);
     graph.render();

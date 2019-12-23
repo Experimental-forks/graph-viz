@@ -1,5 +1,7 @@
-#mountNode {
-  border: solid 1px black;
+
+#container {
+  border: solid 2px #ccc;
+  background-color: #000;
 }
 
 .g6-tooltip {

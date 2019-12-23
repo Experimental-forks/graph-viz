@@ -10,7 +10,9 @@ export default function(data) {
         node.style.lineWidth = 1;
         node.style.stroke = '#333';
         node.style.fill = node.color;
-        //node.size = node.size;
+        if (node.size) {
+             node.size = node.size / 4;
+        }
 
         switch (node.class) {
             case 'c0': {
@@ -38,7 +40,14 @@ export default function(data) {
         edge.shape = 'quadratic'; // or 'cubic' etc
         edge.style.endArrow = edge.directed;
         edge.style.lineWidth = edge.weight;
-        edge.style.opacity = edge.directed ? 1.0 : 0.4;
-        edge.style.stroke = edge.directed ? 'orange' : 'grey';
+        edge.style.opacity = 0.4;
+        edge.style.stroke = edge.directed ? 'orange' : 'gray';
+
+        if (edge.directed) {
+           edge.shape = 'running-polyline';
+           edge.size = 6;
+           edge.style.opacity = 0.6;
+           //edge.style.lineAppendWidth = 3;
+        }
     });
 }
